@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/ivImageFile"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:contentDescription="Photo of Person"/>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:stretchColumns="1"
+        android:layout_weight="70">
+        <TableRow>
+            <TextView
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="ID"/>
+
+            <EditText
+                android:id="@+id/etId"
+                android:enabled="false"
+                android:hint="enter Id of the person"
+                android:inputType="number"
+                android:textSize="20sp" />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Name"/>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="enter Name"
+                android:inputType="text"
+                android:textSize="20sp" />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Image File"/>
+            <EditText
+                android:id="@+id/etImageFile"
+
+                android:textSize="20sp"
+                android:inputType="text"
+                android:hint="enter ImageFile"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Address"/>
+            <EditText
+                android:id="@+id/etAddress"
+
+                android:textSize="20sp"
+                android:inputType="text"
+                android:hint="enter Address"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Mobile"/>
+            <EditText
+                android:id="@+id/etMobile"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:hint="enter Mobile"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Email"/>
+            <EditText
+                android:id="@+id/etEmail"
+                android:textSize="20sp"
+                android:inputType="text"
+                android:hint="enter Email"/>
+
+        </TableRow>
+
+
+    <Button
+
+        android:id="@+id/btnSave"
+        android:text="SAVE"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:layout_margin="10dp"
+        android:textStyle="bold"/>
+    <Button
+
+        android:id="@+id/btnCancel"
+        android:text="CANCEL"
+        android:textStyle="bold"
+        android:background="@color/blue"
+        android:textColor="@color/white" />
+
+    </TableLayout>
+
+</LinearLayout>

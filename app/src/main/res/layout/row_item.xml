@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_margin="20dp"
+        android:layout_weight="50"
+        android:orientation="vertical">
+
+        <ImageView
+
+            android:id="@+id/ivImageFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="image of person" />
+    </LinearLayout>
+        <LinearLayout
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:layout_weight="50">
+             <TextView
+                 android:text="Name"
+                 android:id="@+id/tvName"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:textStyle="bold"/>
+
+             <TextView
+                 android:text="Address"
+                android:id="@+id/tvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="Mobile"
+                android:id="@+id/tvMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="Email"
+                android:id="@+id/tvEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"/>
+
+             </LinearLayout>
+
+</LinearLayout>
