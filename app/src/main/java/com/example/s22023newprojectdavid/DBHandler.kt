@@ -38,9 +38,9 @@ class DBHandler(context:Context,factory :SQLiteDatabase.CursorFactory?)
 
 
     override fun onUpgrade(db: SQLiteDatabase, old: Int, new: Int) {
-        // drop existing table
+        // drop existing table name "tableName"
         db.execSQL("DROP TABLE IF EXISTS $tableName")
-        // create table
+        // create new table name "tableName"
         onCreate(db)
     }
     fun getAllPerson():ArrayList<Person> {
@@ -73,7 +73,7 @@ class DBHandler(context:Context,factory :SQLiteDatabase.CursorFactory?)
         return personList
 
     }
-    //add new record in the data base
+    //add new record in the database
     fun addPerson(person:Person){
         // get writable db
         val db= this.writableDatabase
@@ -85,7 +85,7 @@ class DBHandler(context:Context,factory :SQLiteDatabase.CursorFactory?)
         cv.put(keyMobile,person.mobile)
         cv.put(keyEmail,person.email)
         db.insert(tableName,null , cv)
-        // close the db
+        // close the db after use
         db.close()
 
 
@@ -102,7 +102,7 @@ class DBHandler(context:Context,factory :SQLiteDatabase.CursorFactory?)
         cv.put(keyEmail,person.email)
         // update function of db
         db.update(tableName, cv,"$keyID=?", arrayOf((person.id.toString())))
-        // close the db
+        // close the db after use
         db.close()
 
     }
@@ -129,7 +129,9 @@ class DBHandler(context:Context,factory :SQLiteDatabase.CursorFactory?)
             person.email=cursor.getString(5)
         }
             cursor.close()
+            // close cursor after use
         db.close()
+        // close database after use
         // return person object
         return person
 
@@ -140,7 +142,7 @@ class DBHandler(context:Context,factory :SQLiteDatabase.CursorFactory?)
         val db=this.writableDatabase
         // call db delete function
         db.delete(tableName,"$keyID=?", arrayOf(id.toString()))
-        // close db
+        // close db after use
         db.close()
 
     }
